@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_FUGR" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <AREAT>Funciones para la Copia de Roles</AREAT>
+   <INCLUDES>
+    <SOBJ_NAME>LZCOPYROLESTOP</SOBJ_NAME>
+    <SOBJ_NAME>SAPLZCOPYROLES</SOBJ_NAME>
+   </INCLUDES>
+   <FUNCTIONS>
+    <item>
+     <FUNCNAME>Z_GET_ROL_FROM_USER</FUNCNAME>
+     <REMOTE_CALL>R</REMOTE_CALL>
+     <SHORT_TEXT>Función remota de obtención de roles</SHORT_TEXT>
+     <IMPORT>
+      <RSIMP>
+       <PARAMETER>IT_USUARIO</PARAMETER>
+       <TYP>ZTT_USER</TYP>
+      </RSIMP>
+     </IMPORT>
+     <EXPORT>
+      <RSEXP>
+       <PARAMETER>T_ROLES</PARAMETER>
+       <TYP>ZTT_TIPOROL</TYP>
+      </RSEXP>
+     </EXPORT>
+     <DOCUMENTATION>
+      <RSFDO>
+       <PARAMETER>IT_USUARIO</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tipo tabla de usuarios para copia de roles</STEXT>
+      </RSFDO>
+      <RSFDO>
+       <PARAMETER>T_ROLES</PARAMETER>
+       <KIND>P</KIND>
+       <STEXT>Tipo rol para programa de copia de roles</STEXT>
+      </RSFDO>
+     </DOCUMENTATION>
+    </item>
+   </FUNCTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>
