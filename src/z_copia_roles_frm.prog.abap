@@ -321,8 +321,8 @@ FORM fabd_copiar_rol TABLES t_salida STRUCTURE gs_salida
 * Z (se carga con Z_CARGA_TCODES) si hay una transacción equivalente de
 * visualización.
                     SELECT SINGLE * INTO ls_ztstc FROM ztstc
-                           WHERE tcode = ls_1251-low.
-                    "                      and actua = 'X'.
+                           WHERE tcode = ls_1251-low
+                                 and actua = 'X'.
                     IF sy-subrc = 0.
                       ls_tcode-rol = ls_salida-rol_copia.
                       ls_tcode-code = ls_ztstc-tcode_vis.
@@ -346,7 +346,8 @@ FORM fabd_copiar_rol TABLES t_salida STRUCTURE gs_salida
 *                    ls_tcode-text = TEXT-016.
 
                     SELECT SINGLE * INTO ls_ztstc FROM ztstc
-                    WHERE tcode = ls_1251-low.
+                    WHERE tcode = ls_1251-low
+                    and actua = 'X'.
 
                     IF sy-subrc = 0.
 *          Cambiamos TCDE
@@ -404,7 +405,8 @@ FORM fabd_copiar_rol TABLES t_salida STRUCTURE gs_salida
 * Z (se carga con Z_CARGA_TCODES) si hay una transacción equivalente de
 * visualización.
                         SELECT SINGLE * INTO ls_ztstc FROM ztstc
-                               WHERE tcode = ls_tcodes-tcode.
+                               WHERE tcode = ls_tcodes-tcode
+                                and actua = 'X'.
                         IF sy-subrc = 0.
                           ls_tcode-rol = ls_salida-rol_copia.
                           ls_tcode-code = ls_ztstc-tcode_vis.
